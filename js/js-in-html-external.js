@@ -18,6 +18,7 @@ console.log("Your favorite color is " + favoriteColor);
 
 alert("Great! " + favoriteColor + " is also my favorite color!" );
 
+//Movie Rentals
 var lilMerm = parseInt(prompt("How many days did you rent Little Mermaid?"));
 
 var brotherB = parseInt(prompt("How many days did you rent Brother Bear?"));
@@ -28,6 +29,7 @@ var totalOwed = (lilMerm + brotherB + hercules)
 
 alert("Your total price for accumulated days is $" + totalOwed);
 
+//Total Pay
 var googleRate = prompt("What is your hourly rate working for Google?");
 
 var googleHours = prompt("How many hours did you work in total for Google?");
@@ -57,12 +59,14 @@ var totalPay = (Number(googlePay) + Number(amazonPay) + Number(facebookPay));
 
 alert("This is your total pay from the 3 jobs: $" + totalPay);
 
+//Can you enroll in class? (Boolean)
 var ClassSize = confirm("Are they any spots open in the class?");
 
 var ClassConflict = confirm("Are there no schedule conflicts?");
 
 alert("Are you able to enroll? " + (ClassSize && ClassConflict));
 
+//Premium Benefit (Boolean)
 var hasMoreThanTwoItems = confirm("Do you have more than two items in your cart?");
 
 var isOfferValid = confirm("Is the offer still valid?");
