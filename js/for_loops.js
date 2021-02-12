@@ -49,19 +49,27 @@ showMultiplicationTable(7);
 //         var result = multiplier * i;
 //         console.log(multiplier + ' * ' + i + ' = ' + result);
 //     }
-for (var i = 1; i <= 10; i++){
+for (var i = 0; i <= 10 ; i++){
     var random = Math.floor((Math.random() * 200) + 20);
     if (random % 2 === 0){
         console.log(random + " is even");
     }else{
-        console.log(random + " is odd")
+        console.log(random + " is odd");
     }
 }
 
-for (var index = 1; index < 10; index++){
+// for (var i = 1; i < 10; ++i){
+//     var
+//     if(i === 1 ){
+//         console.log();
+//     }
+// }
 
-    if(index === 1){
-        index++
-        console.log(index);
-    }
-}
+// for (var i = 100; i >= 5; i = i - 5) {
+//     var userNum = prompt("Please give me an odd number!");
+//     if (userNum % 3 === 0) {
+//         console.log(userNum + " is an odd number!");
+//     }else{
+//         console.log(userNum + " is not an odd number!")
+//     }
+// }
