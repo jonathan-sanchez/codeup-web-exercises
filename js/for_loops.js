@@ -22,7 +22,7 @@ function showMultiplicationTable(num) {
     }
 
 }
-showMultiplicationTable(5)
+showMultiplicationTable(7);
 // function sayHelloXTimes(num) {
 //     for (num; num >= 0; num--) {
 //         if (num % 5 === 0) {
@@ -49,6 +49,19 @@ showMultiplicationTable(5)
 //         var result = multiplier * i;
 //         console.log(multiplier + ' * ' + i + ' = ' + result);
 //     }
-for (i =  ) {
+for (var i = 1; i <= 10; i++){
+    var random = Math.floor((Math.random() * 200) + 20);
+    if (random % 2 === 0){
+        console.log(random + " is even");
+    }else{
+        console.log(random + " is odd")
+    }
+}
 
+for (var index = 1; index < 10; index++){
+
+    if(index === 1){
+        index++
+        console.log(index);
+    }
 }
