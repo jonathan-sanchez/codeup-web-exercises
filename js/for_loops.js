@@ -22,7 +22,7 @@ function showMultiplicationTable(num) {
     }
 
 }
-showMultiplicationTable(7)
+showMultiplicationTable(5)
 // function sayHelloXTimes(num) {
 //     for (num; num >= 0; num--) {
 //         if (num % 5 === 0) {
@@ -49,3 +49,6 @@ showMultiplicationTable(7)
 //         var result = multiplier * i;
 //         console.log(multiplier + ' * ' + i + ' = ' + result);
 //     }
+for (i =  ) {
+
+}
