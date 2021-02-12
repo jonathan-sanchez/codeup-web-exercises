@@ -77,7 +77,7 @@ for (var i = 0; i <= 10; i++){
 }
 
 //Create a for loop that uses console.log to create the output shown.
-var str = '';
+var str = "";
 
 for(var x = 0; x <= 9 ; x++) {
     for(var y = 1; y <= x; y++) {
