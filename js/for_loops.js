@@ -31,7 +31,12 @@ Create a function named showMultiplicationTable that accepts a number and consol
  7 x 9 = 63
  7 x 10 = 70
 */
-
+//for (var i = 1; i <= 4; i++) {
+//      console.log(i + " x " + number + " = " + (i * number));
+//}
+//for (var i = 1; i <= 12; i++) {
+//  showMulitiplicationTable(i);
+//}
 function showMultiplicationTable(num) {
     for (var i = 1; i <= 10; i++ ) {
         var result = num * i;
@@ -68,7 +73,7 @@ showMultiplicationTable(7);
 // 199 is odd
 
 for (var i = 0; i <= 10; i++){
-    var randomNum = Math.floor((Math.random() * 200) + 20);
+    var randomNum = Math.floor((Math.random() * (200 - 20 + 1) + 20));
     if (randomNum % 2 === 0){
         console.log(randomNum + " is even");
     }else{
@@ -77,9 +82,18 @@ for (var i = 0; i <= 10; i++){
 }
 
 //Create a for loop that uses console.log to create the output shown.
+//Lecture example:
+// for (var outerLoop = 1; outerLoop <= 9; outerLoop++) {
+//     var output = "";
+//     for (var innerLoop = 1; innerLoop <= outerLoop; innerLoop++) {
+//         output = output + outerLoop;
+//     }
+//     console.log(output);
+// }
+//My answer:
 var str = "";
 
-for(var x = 0; x <= 9 ; x++) {
+for(var x = 1; x <= 9 ; x++) {
     for(var y = 1; y <= x; y++) {
         str += x;
     }
@@ -92,3 +106,19 @@ console.log(str);
 for (var i = 100; i >= 5; i = i - 5) {
     console.log(i);
 }
+//for (var i = 1; i <= 5; i++) {
+//  console.log(i);
+//}
+//for (var i = 1; i <= 5; i--) {
+//  console.log(i);
+//}
+//for (var i = 1; i <= 5; i -= 2) {
+//  console.log(i);
+//}
+//for (var x = 1;mx <= 4; x++) {
+//
+//  for (var y = 1; y <= 3; x++) {
+//      output = output + y;
+//  }
+//  console.log(output);
+//}
