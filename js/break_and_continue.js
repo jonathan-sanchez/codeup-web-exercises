@@ -1,17 +1,31 @@
 "use strict"
 //Break and Continue exercise:
+//Lecture Example:
+// var userNumber = Number(prompt("Give me an odd number between 1 and 50!"));
 //
-// for (var i = 1; i < 50; i++) {
-//     if (i % 1 === 0) {
-//         var num = prompt("Give me an odd number between 1 and 50!");
-//         console.log("The number to skip is: " + num);
-//     }else if (i % 2 === 0){
-//         console.log(prompt("That is not an odd number! Try again!"));
-//     }
+// function isNumberInRange(num) {
+//     return num >= 1 && num <= 50;
 // }
-var i = 0;
-do {
-    console.log(i);
-    i++
-}
-while (i < 50);
+//
+// function isNumberEven(num){
+//     return num % 2 === 0;
+// }
+//
+// while (true) {
+//     if (!isNumberEven(userNumber) && isNumberInRange(userNumber)) {
+//         break;
+//     }
+//     userNumber = Number(prompt("Give me an odd number between 1 and 50!"));
+// }
+//
+// console.log("The number to skip is: " + userNumber);
+//
+// for (var i = 1; i <= 49; i += 2) {
+//     if (i === userNumber) {
+//      console.log("Yikes! Skipping number: " + userNumber);
+//      continue;
+//     }
+//     console.log("Here is an odd number: " + i);
+// }
+//
+//My Answer:
