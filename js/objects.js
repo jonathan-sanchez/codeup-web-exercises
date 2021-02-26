@@ -15,6 +15,16 @@
         firstName: "Jonathan",
         lastName: "Sanchez"
     }
+    //Lecture Example:
+    // var personTwo = {
+    //     firstName: "John",
+    //     lastName: "Doe"
+    // }
+    // var person = new Object();
+    //
+    // person.firstName = "Rick";
+    // person.lastName = "Sanchez";
+
     console.log(person.firstName);
     console.log(person.lastName);
     /**
@@ -26,6 +36,17 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    //Lecture Example:
+    // var sayGreeting = function () {
+    //     return "Hello from " + this.firstName + " " + this.lastName + "!";
+    // };
+    //
+    // person.sayHello = sayGreeting;
+    // personTwo.sayHello = sayGreeting;
+    //
+    // console.log(person.sayHello());
+    // console.log(personTwo.sayHello());
+    //My Answer:
     person.sayHello = function () {
         return("Hello from " + person.firstName + " " + person.lastName + "!");
     }
@@ -51,8 +72,14 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function () {
-
+    shoppers.forEach(function (shopper) {
+        if (shopper.amount > 200) {
+            var discount = shopper.amount * .12;
+            var newAmount = shopper.amount - discount;
+            console.log(shopper.name + " you were originally going to spend $" + shopper.amount + ", but you're discounted total is now $" + newAmount);
+        }else{
+            console.log(shopper.name + " you still owe $" + shopper.amount + ", you did not get a discount. :(");
+        }
     })
 
     /** TODO:
@@ -67,7 +94,47 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = [
+        {
+            title: "The great book",
+            author: {
+                firstName: "Dan",
+                lastName: "Marino"
+            }
+        },
+        {
+            title: "Clockwork Angel",
+            author: {
+                firstName: "Cassandra",
+                lastName: "Clare"
+            }
+        },
+        {
+            title: "Becoming a Developer",
+            author: {
+                firstName: "Douglas",
+                lastName: "Hirsh"
+            }
+        },
+        {
+            title: "My Life from Car Sales to Teaching!",
+            author: {
+                firstName: "Kenneth",
+                lastName: 'Howell'
+            }
+        },
+        {
+            title: "The Color Purple",
+            author: {
+                firstName: "Jane",
+                lastName: "Doe"
+            }
+        }
+    ]
 
+    console.log(books[3]);
+    console.log(books[3]);
+    console.log(books[3]);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -92,7 +159,12 @@
      *      ---
      *      ...
      */
-
+    books.forEach(function (book, index) {
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
+    })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
