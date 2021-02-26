@@ -175,5 +175,18 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(bookTitle, authorFirstName, authorLastName){
+        var newBook = {
+            title: bookTitle,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName
+            }
+        }
+        return newBook;
+    }
+
+
+    createBook("My side of the Mountain", "John", "Doe");
 
 })();
