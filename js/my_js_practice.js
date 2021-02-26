@@ -56,12 +56,15 @@ console.log("What up Jon!");
 // }
 // calculateSupply(27, 1);
 
-var x = 0;
-
-while(x<6) {
-
-    x++;
-
-}
-
-document.write(x);
+//The Geometrizer:
+//Create 2 functions that calculate properties of a circle.
+//Create a function named calcCircumference:
+//Create a function named calcArea:
+// function calGeometry(radius) {
+//     var circumference = Math.PI * 2 * radius;
+//     console.log("The circumference is " + circumference);
+//     var area = Math.PI * radius * radius;
+//     console.log("The area is " + area);
+// }
+// calGeometry(3);
+// Write a JavaScript conditional statement to sort three numbers. Display an alert box with the specified sign:
