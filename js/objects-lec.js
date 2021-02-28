@@ -213,3 +213,7 @@ var myGarage = [
 
 
 
+function convert(minutes) {
+    var result = minutes * 60;
+    return result;
+}
