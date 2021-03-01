@@ -68,3 +68,12 @@ console.log("What up Jon!");
 // }
 // calGeometry(3);
 // Write a JavaScript conditional statement to sort three numbers. Display an alert box with the specified sign:
+function printArray(number) {
+    var newArray = [1];
+
+    for (var i = 1; i <= number; i++) {
+        newArray.push(i);
+    }
+    return newArray;
+}
+printArray(1);
