@@ -68,12 +68,31 @@ console.log("What up Jon!");
 // }
 // calGeometry(3);
 // Write a JavaScript conditional statement to sort three numbers. Display an alert box with the specified sign:
-function printArray(number) {
-    var newArray = [1];
+// function printArray(number) {
+//     var newArray = [1];
+//
+//     for (var i = 1; i <= number; i++) {
+//         newArray.push(i);
+//     }
+//     return newArray;
+// }
+// printArray(1);
 
-    for (var i = 1; i <= number; i++) {
-        newArray.push(i);
-    }
-    return newArray;
-}
-printArray(1);
+// function recordTemps(records, currentWeek) {
+//     for (let i = 0; i < currentWeek.length; ++i) {
+//         if (currentWeek[i][0] < records[i][0])
+//             records[i][0] = currentWeek[i][0];
+//         if (currentWeek[i][1] > records[i][1])
+//             records[i][1] = currentWeek[i][1];
+//     }
+//
+//     return records;
+// }console.log(recordTemps(25, 80));
+//BasketBall points:
+// function points(twoPointers, threePointers) {
+//     twoPointers = 2 * twoPointers;
+//     threePointers = 3 * threePointers;
+//     var finalPoints = (twoPointers + threePointers);
+//     return finalPoints;
+// }
+// console.log(points(38, 8));
