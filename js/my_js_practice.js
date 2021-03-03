@@ -1,98 +1,81 @@
 "use strict"
-console.log("What up Jon!");
-//Write a JavaScript program that accepts two integers and display the larger.
-// var myNum1, myNum2;
-// myNum1 = window.prompt("Hi! please give me a number!", "0");
-// myNum2 = window.prompt("Hey again! Please give me another number!", "0");
+console.log("What up Jon! This is your practice JS file!");
+//My JavaScript Functions:
 //
-// if(parseInt(myNum1, 10) > parseInt(myNum2, 10))
-// {
-//     console.log("The larger of "+ myNum1+ " and "+ myNum2+ " is "+ myNum1+ ".");
-// }
-// else
-// if(parseInt(myNum2, 10) > parseInt(myNum1, 10))
-// {
-//     console.log("The larger of "+ myNum1+" and "+ myNum2+ " is "+ myNum2+ ".");
-// }
-// else
-// {
-//     console.log("The values "+ myNum1+ " and "+ myNum2+ " are equal.");
-// }
-//Write a JavaScript function that reverses a number.
-//example: x = 32243;
-//expected output: 34223.
+//Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
+// Examples
 //
-// function reverseNum (number) {
-//     number = number + "";
-//     return number.split("").reverse().join("");
-// }
-// console.log(reverseNum(102811));
+// makesTen(9, 10) ➞ true
 //
-//The Fortune Teller
-//write a function named tellFortune:
-// function tellFortune (numChildren, partnersName, geoLocation, jobTitle){
-//     var future = "You will be a " + jobTitle + " in " + geoLocation + " and married to " + partnersName + " with " + numChildren + " kids."
-//     console.log(future)
-// }
-// tellFortune(2,"Hannah","Colorado", "Web Developer");
+// makesTen(9, 9) ➞ false
 //
-//The puppy age calculator:
-//Write a function named calculateDogAge:
-//
-// function calculateDogAge (pupAge) {
-//     var dogYears = 7 * pupAge;
-//     console.log("Your pup is " + dogYears + " years old in dog years!");
-// }
-// calculateDogAge(4);
-//
-//The lifetime Supply Calculator:
-//Write a function named calculateSupply:
-//
-// function calculateSupply (age, amountPerDay) {
-//     var maxAge = 100;
-//     var totalNeeded = (amountPerDay * 365) * (maxAge - age);
-//     var message = "You will need " + totalNeeded + " of twinkies to last you until the stinky old age of " + maxAge + ".";
-//     console.log(message);
-// }
-// calculateSupply(27, 1);
+// makesTen(1, 9) ➞ true
 
-//The Geometrizer:
-//Create 2 functions that calculate properties of a circle.
-//Create a function named calcCircumference:
-//Create a function named calcArea:
-// function calGeometry(radius) {
-//     var circumference = Math.PI * 2 * radius;
-//     console.log("The circumference is " + circumference);
-//     var area = Math.PI * radius * radius;
-//     console.log("The area is " + area);
-// }
-// calGeometry(3);
-// Write a JavaScript conditional statement to sort three numbers. Display an alert box with the specified sign:
-// function printArray(number) {
-//     var newArray = [1];
-//
-//     for (var i = 1; i <= number; i++) {
-//         newArray.push(i);
-//     }
-//     return newArray;
-// }
-// printArray(1);
+function makesTen(a, b) {
+    if (a === 10 || b === 10 || a + b === 10) { //Logical OR (||)
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(makesTen(3, 7));
 
-// function recordTemps(records, currentWeek) {
-//     for (let i = 0; i < currentWeek.length; ++i) {
-//         if (currentWeek[i][0] < records[i][0])
-//             records[i][0] = currentWeek[i][0];
-//         if (currentWeek[i][1] > records[i][1])
-//             records[i][1] = currentWeek[i][1];
-//     }
+//Create a function that takes an integer and return true if it's divisible by 100, otherwise return false.
+//Examples
 //
-//     return records;
-// }console.log(recordTemps(25, 80));
-//BasketBall points:
-// function points(twoPointers, threePointers) {
-//     twoPointers = 2 * twoPointers;
-//     threePointers = 3 * threePointers;
-//     var finalPoints = (twoPointers + threePointers);
-//     return finalPoints;
-// }
-// console.log(points(38, 8));
+// divisible(1) ➞ false
+//
+// divisible(1000) ➞ true
+//
+// divisible(100) ➞ true
+
+function divisible(num) {
+    return num % 100 === 0;
+}
+console.log(divisible(100));
+
+//Given two arguments, return an array which contains these two arguments.
+//
+//makePair(1, 2) ➞ [1, 2]
+//
+// makePair(51, 21) ➞ [51, 21]
+//
+// makePair(512124, 215) ➞ [512124, 215]
+
+function makePair(num1, num2) {
+    var arr = [num1, num2];
+    return arr;
+}
+console.log(makePair(51, 21));
+
+//Destructuring Assignment:
+
+//You can assign variables from arrays like this:
+//
+// arr = [1, 2, 3, 4, 5, 6, 7, 8]
+// first = arr[0]
+// second = arr[1]
+// third = arr[2]
+// other = arr.slice(3)
+//
+// console.log(first) ➞ outputs 1
+// console.log(second) ➞ outputs 2
+// console.log(third) ➞ outputs 3
+// console.log(other) ➞ outputs [4, 5, 6, 7, 8]
+//
+// However, this is long and tedious. Instead, we can use Object Destructuring to create all those variables in one line. Your task: Create variables first, second, third and other from the given array using Destructuring Assignment (check the Resources tab for some examples).
+// Examples
+//
+// first ➞ 1
+//
+// second ➞ 2
+//
+// third ➞ 3
+//
+// other ➞ [4, 5, 6, 7, 8]
+//
+// Your task is to unpack the arr writeyourcodehere into four variables, first, second, third, and other.
+
+writeYourCodeHere = [1, 2, 3, 4, 5, 6, 7, 8];
+let [first,second,third,...other] = [1,2,3,4,5,6,7,8];
+//console.log([first, second]);
