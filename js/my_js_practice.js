@@ -76,6 +76,22 @@ console.log(makePair(51, 21));
 //
 // Your task is to unpack the arr writeyourcodehere into four variables, first, second, third, and other.
 
-writeYourCodeHere = [1, 2, 3, 4, 5, 6, 7, 8];
-let [first,second,third,...other] = [1,2,3,4,5,6,7,8];
+// writeYourCodeHere = [1, 2, 3, 4, 5, 6, 7, 8];
+// let [first,second,third,...other] = [1,2,3,4,5,6,7,8];
 //console.log([first, second]);
+
+//Frames per Second:
+//Create a function that returns the number of frames shown in a given number of minutes for a certain FPS.
+// Examples
+//
+// frames(1, 1) ➞ 60
+//
+// frames(10, 1) ➞ 600
+//
+// frames(10, 25) ➞ 15000
+function frames(minutes, fps) {
+    return minutes * (fps * 60); //1 FPS equals 60, multiply fps, then multiply total fps by minutes.
+}
+console.log(frames(10, 25));
+
+//
