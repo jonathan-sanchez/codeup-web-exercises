@@ -7,9 +7,39 @@
 <body>
 
     <form action = "https://request-inspector.glitch.me">
+
+        <label>
+
+
         <label for="zipCodeInput">Zip Code</label>
+
         <input id="zipCodeInput" name="zipCode" type="number" placeholder="12345">
+
+        <input type="hidden" value="HiddenValue">
         <br>
+
+        <textarea name="textarea" placeholder="Put your bio in here.">Hello my name is...</textarea>
+
+        <br>
+        <input type="checkbox" name="locatedInTexas">Do you live in Texas?
+        <br>
+
+        <h2>Quiz</h2>
+
+        A <input type="radio" name="Quiz_question_1" value="Loves flowers"><br>
+        B <input type="radio" name="Quiz_Question_1" value="loves coffee"<br>
+        C <input type="radio" name="Quiz_question_1" value="loves pizza"><br>
+        D <input type="radio" name="Quiz_question_1" value="loves video games"><br>
+
+        <br>
+
+        <h3>What coffee do you like?</h3>
+
+        <select name="coffee_preferance">
+            <option value="Light">Light Roast</option>
+            <option value="Dark">Dark Roast</option>
+            <option value="Espresso">Espresso Blend</option>
+        </select>
         <input type="submit">
     </form>
 
