@@ -9,11 +9,19 @@
     <form action = "https://request-inspector.glitch.me">
 
         <label>
-
+            Email
+        <input type="email" name="email" value="hello@gmail.com">
+        </label>
+        <br>
 
         <label for="zipCodeInput">Zip Code</label>
 
         <input id="zipCodeInput" name="zipCode" type="number" placeholder="12345">
+        <br>
+
+        <label>
+            <input type="password" name="userPassword">
+        </label>
 
         <input type="hidden" value="HiddenValue">
         <br>
@@ -21,25 +29,28 @@
         <textarea name="textarea" placeholder="Put your bio in here.">Hello my name is...</textarea>
 
         <br>
-        <input type="checkbox" name="locatedInTexas">Do you live in Texas?
+        <label>click me
+            <input type="checkbox" name="locatedInTexas">
+        </label>Do you live in the state of Texas?
         <br>
 
         <h2>Quiz</h2>
 
         A <input type="radio" name="Quiz_question_1" value="Loves flowers"><br>
-        B <input type="radio" name="Quiz_Question_1" value="loves coffee"<br>
+        B <input type="radio" name="Quiz_Question_1" value="loves coffee"><br>
         C <input type="radio" name="Quiz_question_1" value="loves pizza"><br>
-        D <input type="radio" name="Quiz_question_1" value="loves video games"><br>
+        D <input type="radio" name="Quiz_question_1" value="loves video"><br> games"><br>
 
         <br>
 
         <h3>What coffee do you like?</h3>
-
-        <select name="coffee_preferance">
+        <label for="coffee">Coffees</label>
+        <select id="coffee" name="coffee_preference">
             <option value="Light">Light Roast</option>
             <option value="Dark">Dark Roast</option>
             <option value="Espresso">Espresso Blend</option>
         </select>
+
         <input type="submit">
     </form>
 
