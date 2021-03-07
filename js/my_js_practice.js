@@ -94,4 +94,13 @@ function frames(minutes, fps) {
 }
 console.log(frames(10, 25));
 
-//
+//Check if an integer is divisible by 5 or 2:
+function divisibleByFiveOrTwo(number) {
+    if(number % 5 === 0) {
+        return number;
+    }else if(number % 2 === 0){
+        return number;
+    }
+    return false;
+}
+console.log(divisibleByFiveOrTwo(13));
