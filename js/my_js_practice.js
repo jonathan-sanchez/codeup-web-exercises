@@ -104,3 +104,13 @@ function divisibleByFiveOrTwo(number) {
     return false;
 }
 console.log(divisibleByFiveOrTwo(13));
+
+//Greeting:
+function greeting(name){
+    if(name === "Jonathan") {
+        return "Hello, my Love!";
+    }
+    return "Hello, " + name + "!";
+
+}
+console.log(greeting("Jonathan"));
