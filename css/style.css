@@ -1,4 +1,59 @@
-.fancy-header {
-    color: rebeccapurple;
-    text-decoration: underline;
+/*.fancy-header {*/
+/*    color: rebeccapurple;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: ;*/
+/*    src: url("");*/
+/*}*/
+body {
+    /*background-color: orange;*/
+    color: orangered;
+    background-image: url("../img/pexels5.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    font-family: 'RocknRoll One', sans-serif;
+    text-align: center;
+    width: 90%;
+
+}
+
+.auto-margins {
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    text-align: center;
+    text-decoration-line: underline;
+    color: black;
+    margin-top: 50px;
+}
+
+ul, ol {
+    list-style: square;
+}
+
+table {
+    border: thick solid black;
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+
+th, td {
+    border: thick solid black;
+    padding: 7px;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: green;
 }
