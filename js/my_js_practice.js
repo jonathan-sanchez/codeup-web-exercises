@@ -114,3 +114,21 @@ function greeting(name){
 
 }
 console.log(greeting("Jonathan"));
+
+function divisibleByFive(n) {
+    if (n % 5 === 0){
+        return true;
+    }
+    console.log("That number is not divisible by 5");
+}
+console.log(divisibleByFive(4));
+
+//Area of a rectangle if false - 1:
+
+function area(h, w) {
+    if (h <= 0 || w <= 0) {
+        return - 1;
+    }
+    return h * w;
+}
+console.log(area(0, 0));
