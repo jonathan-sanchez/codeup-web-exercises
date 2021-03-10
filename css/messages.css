@@ -1,6 +1,9 @@
 /*bonus:*/
 :root {
     --info-blue: #c3d6f9;
+    --success-green: #c6f5d8;
+    --warning-yellow: #fcfcc3;
+    --error-red: #ffd1d8;
 
 }
 
@@ -20,21 +23,21 @@ body, html {
 }
 
 .message-info {
-    background-color: #c3d6f9;
+    background-color: var(--info-blue);
     color: #4b3fa5;
 }
 
 .message-success {
-    background-color: #c6f5d8;
+    background-color: var(--success-green);
     color: #007334;
 }
 
 .message-warning {
-    background-color: #fcfcc3;
+    background-color: var(--warning-yellow);
     color:#9b8600;
 }
 
 .message-error {
-    background-color: #ffd1d8;
+    background-color: var(--error-red);
     color: #900234
 }
