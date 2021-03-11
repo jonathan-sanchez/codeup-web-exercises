@@ -19,20 +19,20 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// function analyzeColor(color) {
-//     if (color === "blue") {
-//     return ("Blue is the the color of the sky!")
-//     } else if (color === "red") {
-//         return ("Strawberries are red!")
-//     } else if (color === "cyan") {
-//         return ("The heck is cyan?")
-//     } else{
-//        return ("I dont know anything about " + color)
-//
-// }}
-// var returnFunction = analyzeColor("blue");
-//
-// console.log(returnFunction);
+function analyzeColor(color) {
+    if (color === "blue") {
+    return ("Blue is the the color of the sky!")
+    } else if (color === "red") {
+        return ("Strawberries are red!")
+    } else if (color === "cyan") {
+        return ("The heck is cyan?")
+    } else{
+       return ("I dont know anything about " + color)
+
+}}
+var returnFunction = analyzeColor("blue");
+
+console.log(returnFunction);
 
 
 // Don't change the next two lines!
@@ -49,45 +49,45 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-// console.log(analyzeColor(randomColor));
+//console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
-// function analyzeColor(Color) {
-//
-//     switch(Color) {
-//     case "red":
-//         return ("Strawberries are red!");
-//
-//     case "orange":
-//         return ("Oranges are orange!");
-//
-//     case "yellow":
-//         return ("Sunflowers are yellow!");
-//
-//     case "green":
-//         return ("Grass is green!");
-//
-//     case "blue":
-//         return ("Blue is the color of the infantry");
-//
-//     case "indigo":
-//         return ("Indigo is a cool color!");
-//
-//     case "violet":
-//         return ("Violet is my sisters favorite color!");
-//
-//     default:
-//         return ("I dont know that color.");
-//
-//
-// }}
+function analyzeColor(Color) {
 
-// console.log(analyzeColor("blue"));
-// console.log(analyzeColor(randomColor));
+    switch(Color) {
+    case "red":
+        return ("Strawberries are red!");
+
+    case "orange":
+        return ("Oranges are orange!");
+
+    case "yellow":
+        return ("Sunflowers are yellow!");
+
+    case "green":
+        return ("Grass is green!");
+
+    case "blue":
+        return ("Blue is the color of the infantry");
+
+    case "indigo":
+        return ("Indigo is a cool color!");
+
+    case "violet":
+        return ("Violet is my sisters favorite color!");
+
+    default:
+        return ("I dont know that color.");
+
+
+}}
+
+console.log(analyzeColor("blue"));
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:

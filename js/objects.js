@@ -190,11 +190,67 @@
     createBook("My side of the Mountain", "John", "Doe");
 
 })();
-Write a function named calculateTax that takes in two inputs representing the totalPaid and the taxPercent. If both inputs are numeric or numeric strings, calculateTax should return the total with tax added in a string looking like: "$XX.XX". If either or both inputs are not numeric or numeric strings, calculateTax should return false.
-calculateTax(25, 8)				 // "$27.00"
-calculateTax(10, 12)             // "$11.20"
-calculateTax(120, 15.5)			 //	"$138.60"
-calculateTax(10, true)           // false
-calculateTax([1, 2, 3], 10)      // false
-calculateTax("Codeup", 100)      // false
-calculateTax()                   // false
+
+// var library = [
+//     {
+//         title: 'Bill Gates',
+//         author: 'The Road Ahead',
+//         libraryID: 1254
+//     },
+//     {
+//         title: 'Steve Jobs',
+//         author: 'Walter Isaacson',
+//         libraryID: 4264
+//     },
+//     {
+//         title: 'Mockingjay: The Final Book of The Hunger Games',
+//         author: 'Suzanne Collins',
+//         libraryID: 3245
+//     },
+//     {
+//         title: 'The Boy, the Mole, the Fox and the Horse',
+//         author: 'Charlie Mackesy',
+//         libraryID: 5203
+//     },
+//     {
+//         title: 'The Four Winds',
+//         author: 'Kristin Hannah',
+//         libraryID: 5972
+//     },
+//     {
+//         title: 'A Court of Silver Flames',
+//         author: 'Suzanne Collins',
+//         libraryID: 2083
+//     },
+//     {
+//         title: 'I hope this reaches her in time ',
+//         author: 'r.h. Sin',
+//         libraryID: 3872
+//     }];
+
+// function sortObjects(Array, options) {
+//
+//     if (!!Array || !!Array[0] || !!Array[]) {
+//         return false
+//
+//     } else if (options.inverse) {
+//
+//         return Array.sort(function (a,b) {
+//             return b[options.propertyToSortBy] - a[options.propertyToSortBy];
+//         })
+//
+//     } else {
+//
+//         return Array.sort(function (a,b) {
+//             return a[options.propertyToSortBy] - b[options.propertyToSortBy];
+//         })
+//     }
+// }
+//
+// const options = {
+//     inverse: false,
+//     propertyToSortBy: "libraryID"
+//
+// }
+//
+// console.log(sortObjects(library,options));
