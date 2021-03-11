@@ -28,31 +28,65 @@ a {
 .top-nav {
     background: var(--light-bg);
     position: fixed;
-    padding: 1.5em;
     width: 100%;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
-    display: inline-block;
-    padding: 1.5em;
-    width: 100%;
+    padding: 0;
     margin: 0;
 }
-.nav-link {
-    color: var(--main-link-color);
+
+.nav-item {
     display: inline-block;
     padding: 1.5em;
+}
+
+.nav-link {
+    color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
 }
 .nav-link:hover {
-    display: inline-block;
-    padding: 1.5em;
     color: var(--link-color);
 }
+
+.container {
+    padding: 2em;
+}
+
 .profile {
     background: var(--light-bg);
+    height: 80px;
 }
+.profile-image {
+    position: absolute;
+    top: 14.5em;
+}
+
+.profile-form {
+    float: right;
+    line-height: 80px;
+}
+
+.profile-details {
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0 .5em;
+}
+
+.timeline {
+    float: left;
+    width: calc(50% - 1em);
+    margin: 0 .5em;
+}
+
+.who-to-follow {
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0 .5em;
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
