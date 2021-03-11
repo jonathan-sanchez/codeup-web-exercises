@@ -52,7 +52,7 @@ a {
 }
 
 .container {
-    padding: 2em;
+    margin-top: 2em;
 }
 
 .profile {
@@ -73,6 +73,15 @@ a {
     float: left;
     width: calc(25% - 1em);
     margin: 0 .5em;
+}
+
+.profile-items {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-entry {
+    margin: .5em;
 }
 
 .timeline {
@@ -108,4 +117,23 @@ a {
 }
 .text-muted {
     color: var(--main-link-color);
+}
+
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+
+.media-image {
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: left;
+}
+
+.media-body {
+    float: left;
+    width: calc(100% - 50px);
 }
