@@ -145,3 +145,18 @@ function isEven(num){
     }
 }
 console.log(isEven(1));
+
+function evenOrOdd(arr) {
+    if(arr.length === 0) return "even";
+
+    const sumOfArray = arr.reduce((a, b) => {
+        return a + b;
+    })
+    if(sumOfArray % 2 === 0) {
+        return "even"
+    }
+    else {
+        return "odd"
+    }
+}
+console.log(evenOrOdd("1"));
