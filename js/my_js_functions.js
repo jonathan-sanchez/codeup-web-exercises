@@ -160,3 +160,8 @@ function evenOrOdd(arr) {
     }
 }
 console.log(evenOrOdd("1"));
+
+function concatName(firstName, lastName) {
+    return lastName + ", " + firstName;
+}
+console.log(concatName("jonathan", "sanchez"));
