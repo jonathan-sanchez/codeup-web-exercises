@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+header nav a {
+    color: black;
+    display: inline-block;
+    font-family: 'work sans', sans-serif;
+}
+
+header nav a:hover {
+    color: blue;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav .nav-bar-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding: .2em 0;
+}
+
+header

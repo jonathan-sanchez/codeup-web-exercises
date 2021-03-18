@@ -31,7 +31,6 @@ a {
     border-radius: 4px;
     text-align: center;
     /*  TODO: Change this flex items basis to 100% of the page  */
-    display: flex;
     flex-basis: 100%;
 }
 
