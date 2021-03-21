@@ -146,5 +146,9 @@ function isEven(num){
 }
 console.log(isEven(1));
 
+function returnNeg(number) {
+    return -Math.abs(number);
+}
 
+console.log(returnNeg(5));
 
