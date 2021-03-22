@@ -152,3 +152,7 @@ function returnNeg(number) {
 
 console.log(returnNeg(5));
 
+const getNumRange = (a, b) =>
+    Array.from({length: b - a - 1}, (_, i) => i + a + 1);
+
+console.log(getNumRange(12, 50));
