@@ -156,3 +156,11 @@ const getNumRange = (a, b) =>
     Array.from({length: b - a - 1}, (_, i) => i + a + 1);
 
 console.log(getNumRange(12, 50));
+
+//Solve for Equation:
+
+function equation(s) {
+    return eval(s);
+}
+
+console.log(equation(eval(1+1)));
