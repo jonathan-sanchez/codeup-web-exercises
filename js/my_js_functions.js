@@ -140,7 +140,7 @@ function isEven(num){
     if (num % 2 === 0) {
         return true;
     }
-    else if(num % 1 === 0) { //If num is odd return false
+    else if(num % 2 === 1) { //If num is odd return false
         return false;
     }
 }
@@ -179,3 +179,11 @@ function length(str) {
     return str.length;
 }
 console.log(length("Allo Govna!"));
+
+//Array reversal:
+
+function reverseArr(arr) {
+    return arr.reverse();
+}
+
+console.log(reverseArr([1, 2, 3, 4, 5, 6]));
