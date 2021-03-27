@@ -171,4 +171,11 @@ function comp(str1, str2) {
     return str1.length === str2.length;
 }
 
-console.log(comp("JON", "HANNAH"));
+console.log(comp("J", "H"));
+
+//Return length of string:
+
+function length(str) {
+    return str.length;
+}
+console.log(length("Allo Govna!"));
