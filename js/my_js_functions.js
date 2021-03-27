@@ -164,3 +164,11 @@ function equation(s) {
 }
 
 console.log(equation(eval(1+1)));
+
+//Compare string size:
+
+function comp(str1, str2) {
+    return str1.length === str2.length;
+}
+
+console.log(comp("JON", "HANNAH"));
