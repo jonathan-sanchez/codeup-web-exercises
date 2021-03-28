@@ -187,3 +187,14 @@ function reverseArr(arr) {
 }
 
 console.log(reverseArr([1, 2, 3, 4, 5, 6]));
+
+//Repeat string function:
+
+function repeatString(str, count) {
+    if (typeof(str) === "string") {
+        return str.repeat(count);
+    }
+        return "Not A String!!";
+}
+
+console.log(repeatString("Hannah", 1));
