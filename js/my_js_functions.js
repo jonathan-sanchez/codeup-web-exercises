@@ -199,6 +199,32 @@ function repeatString(str, count) {
 
 console.log(repeatString("Hannah", 1));
 
+//Operator Function using eval():
+
+function operator(num1, num2, operator) {
+    return eval(num1 + operator + num2);
+}
+
+console.log(operator(7, 7, "*"));
+
+//another way using if statements:
+
+// function operator(num1, num2, operator) {
+//     if (operator === "+"){
+//         return num1 + num2
+//     }else if (operator === "-"){
+//         return num1 - num2
+//     }else if (operator === "*"){
+//         return num1 * num2
+//     }else if (operator === "/"){
+//         return num1 / num2
+//     } else if (operator === "%"){
+//         return num1 % num2
+//     }
+// }
+//
+// console.log(operator(9, 9, "*"));
+
 
 //Arrays:
 
@@ -236,3 +262,12 @@ function getLastArrElement(arr) {
 
 console.log(getLastArrElement([4,1,9,3]));
 
+//Join Array elements into a string:
+
+function arrToString(arr) {
+    return arr.join().toString();
+}
+
+console.log(arrToString(["red","green","white","black"]));
+
+//
