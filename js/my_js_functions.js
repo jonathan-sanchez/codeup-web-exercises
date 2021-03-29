@@ -270,4 +270,3 @@ function arrToString(arr) {
 
 console.log(arrToString(["red","green","white","black"]));
 
-//
