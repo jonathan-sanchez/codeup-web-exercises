@@ -198,3 +198,41 @@ function repeatString(str, count) {
 }
 
 console.log(repeatString("Hannah", 1));
+
+
+//Arrays:
+
+//Write a JS function to check if an input is an Array or not:
+
+function isArray(arr) {
+    if (!Array.isArray(arr)) {
+        return false;
+    }
+        return true;
+}
+console.log(isArray("This is a String!"));
+
+//Write a function to clone an Array:
+
+var arrayClone = function cloneArr(arr) {
+    return arr.slice(0);
+};
+
+console.log(arrayClone([1,2, [4, 0]]));
+
+//Get first element of an Array:
+
+function getFirstArrElement(arr) {
+    return arr[0];
+}
+
+console.log(getFirstArrElement([1,2,3,4,5]));
+
+//Get last element of an Array:
+
+function getLastArrElement(arr) {
+    return arr[arr.length - 1];
+}
+
+console.log(getLastArrElement([4,1,9,3]));
+
