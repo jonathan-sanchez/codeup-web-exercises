@@ -48,6 +48,9 @@
 // innerHTML/innerText
 
 // TODO: Howell's doesn't sound like the name you'd give your hat shop - let's change the innerText of that in our navigation bar to your own name.
+// var changeNavName = document.getElementsByClassName("navbar-brand");
+
+ var .innerText.HTML = ‘name="Jonathan's"<i class="bi-shop mx-1"></i>’
 
 // TODO: There's only one ordered list on the page - can you get into that ordered list and use innerHTML to change the list items within that ordered list to what you think the top sellers were?
 
