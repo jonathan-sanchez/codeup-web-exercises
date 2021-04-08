@@ -28,25 +28,34 @@ $(document).ready(function(){
      * TO DO TOGETHER: Let's make our first AJAX request. Generate a new Hookbin
      * endpoint, then query it for a username...
      */
-    var hookbinUrl = 'https://hookb.in/G9O02V9l6OsWGGeQq076';
-
-    console.log($.ajax(hookbinUrl));
+    // var hookbinUrl = 'https://hookb.in/MqX07G2VWrcBKK6OLeYm';
+    //
+    // console.log($.ajax(hookbinUrl));
 
     /*
      * TO DO TOGETHER: For this next one, we'll send over some data. Add the
      * following JavaScript Object to your Hookbin AJAX request:
      */
-    $.ajax(hookbinUrl, {
-        type: "POST",
-        date: JSON.stringify(car)
-    });
+    // $.ajax(hookbinUrl, {
+    //     type: "POST",
+    //     date: JSON.stringify(car)
+    // });
+
+    //Send a GET request and query for the username bob.
+    // $.ajax(hookbinUrl + "?username=bob");
 
 
     /*
      * TO DO: Refactor the first example using a GET request object instead of
      * appending a query to the url.
      */
-
+    // $.ajax(hookbinUrl, {
+    //     method: "GET",
+    //     data: {
+    //         username: "bob",
+    //         active: true
+    //     }
+    // })
 
     /*********************************************
      *              REQUESTS and RESPONSES
@@ -56,14 +65,31 @@ $(document).ready(function(){
      * TO DO TOGETHER: Now, let's see how we can use AJAX requests to communicate with an
      * API and get data back. Uncomment the line below.
      */
+    var swapiBaseUrl = "https://swapi.dev/api/";
 
+    $.ajax(swapiBaseUrl + "people/", {
+        method: "GET",
+        data: {
+            search: "r2"
+        }
+    }).done(function(data){
+        console.log(data);
+    });
 
 
     /*
      * TO DO: Look up the Star Wars API and make a similar request that would
      * return a list of all Star Wars films.
      */
-
+    $.ajax(swapiBaseUrl + "films/").done(function(data){
+        console.log(data);
+    }).fail(function(jqXHR, status){
+        console.log("failed to get films");
+        console.log(status);
+        console.log(jqXHR);
+    }).always(function(){
+        console.log("getting films");
+    });
 
 
 
