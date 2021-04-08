@@ -6,7 +6,7 @@ $(document).ready(function(){
         make: "Honda",
         model: "Civic",
         year: 2015,
-        funcToDrive: true
+        funToDrive: true
     }
 
     console.log("Should be a string", JSON.stringify(car)); //JSON in a string.
@@ -28,13 +28,18 @@ $(document).ready(function(){
      * TO DO TOGETHER: Let's make our first AJAX request. Generate a new Hookbin
      * endpoint, then query it for a username...
      */
+    var hookbinUrl = 'https://hookb.in/G9O02V9l6OsWGGeQq076';
 
+    console.log($.ajax(hookbinUrl));
 
     /*
      * TO DO TOGETHER: For this next one, we'll send over some data. Add the
      * following JavaScript Object to your Hookbin AJAX request:
      */
-
+    $.ajax(hookbinUrl, {
+        type: "POST",
+        date: JSON.stringify(car)
+    });
 
 
     /*
