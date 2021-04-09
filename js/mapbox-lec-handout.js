@@ -15,15 +15,30 @@
 
 mapboxgl.accessToken = mapboxToken;
 
-var map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9 // starting zoom
-});
+var mapOptions = {
+    container: "map",
+    style: "mapbox://styles/mapbox/streets-v11",
+    center: [-98.4861, 29.4260],
+    zoom: 8
+}
+
+// var map = new mapboxgl.Map({
+//     container: 'map', // container ID
+//     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+//     center: [-74.5, 40], // starting position [lng, lat]
+//     zoom: 9 // starting zoom
+// });
+
+var map = new mapboxgl.Map(mapOptions);
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the MapBox docs! (10 mins~)
 
+// var map = new mapboxgl.Map({
+//     container: 'map', // container ID
+//     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+//     center: [-74.5, 40], // starting position [lng, lat]
+//     zoom: 9 // starting zoom
+// });
 
 
 
@@ -34,14 +49,31 @@ var map = new mapboxgl.Map({
 // Markers are specific locations on a map
 //Use the .setLngLat() and .addTo() methods to add marker to the map
 
-
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-98.4861, 29.4260]. This marker will mark the Alamo on our map.
+
+var marker = new mapboxgl.Marker()
+    .setLngLat([-98.4861, 29.4260])
+    .addTo(map)
 
 // TODO TOGETHER: Change the color of the marker
 
+//See a pattern of sorts: new.mapboxgl.NameOfMethod({object: "option value"})
+
+// var marker = new mapboxgl.Marker({color: "rebeccapurple"})
+//     .setLngLat([-98.4861, 29.4260])
+//     .addTo(map)
+
 // TODO: Make a new marker! Let's experiment with the color and setting the LngLat [how about a marker for Codeup San Antone? -98.4895, 29.4267 Codeup Dallas? -96.8056, 32.7786]
 
+// var codeupSAMarker = new mapboxgl.Marker({color: "green"})
+//     .setLngLat([-98.4896, 29.4268])
+//     .addTo(map)
+
 // TODO: Update the marker object to make the marker draggable. *Hint: reference the docs!
+
+var codeupSAMarker = new mapboxgl.Marker({color: "green", draggable: true})
+    .setLngLat([-98.4896, 29.4268])
+    .addTo(map)
 
 /**********************************************
  * 					POPUPS
@@ -52,12 +84,20 @@ var map = new mapboxgl.Map({
 
 // TODO TOGETHER: Add a popup to the map over San Antonio's Codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
+// var marcoPopUp = new mapboxgl.Popup()
+//     .setLngLat([-98.4896, 29.4268])
+//     .setHTML("<h1><em>Codeup Rocks!</em></h1>")
+//     .addTo(map)
+//
+// codeupSAMarker.setPopup(marcoPopUp)
 
 // TODO TOGETHER: We'll comment out the popup we just added. Next, let's add a popup to the Alamo marker!
 
+var alamoPopup = new mapboxgl.Popup()
+    .setHTML("<p>Remember the Alamo</p>")
+    .addTo(map)
 
-
-
+marker.setPopup(alamoPopup)
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup? Choose one and experiment with implementing that option to a popup!
 // TODO: Try setting the text of a popup by using ".setText()" instead of ".setHTML()" - what happens with HTML tags between the two?
