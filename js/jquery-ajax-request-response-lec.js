@@ -2,19 +2,19 @@ $(document).ready(function(){
     "use strict";
     console.log("Intro to AJAX!");
 
-    var car = {
-        make: "Honda",
-        model: "Civic",
-        year: 2015,
-        funToDrive: true
-    }
-
-    console.log("Should be a string", JSON.stringify(car)); //JSON in a string.
-
-    var jsonOfCar = JSON.stringify(car); //JSON in a variable.
-
-    console.log("JSON in  a variable", jsonOfCar);
-    console.log("The object car", car);
+    // var car = {
+    //     make: "Honda",
+    //     model: "Civic",
+    //     year: 2015,
+    //     funToDrive: true
+    // }
+    //
+    // console.log("Should be a string", JSON.stringify(car)); //JSON in a string.
+    //
+    // var jsonOfCar = JSON.stringify(car); //JSON in a variable.
+    //
+    // console.log("JSON in  a variable", jsonOfCar);
+    // console.log("The object car", car);
 
 
     //JSON?
@@ -70,7 +70,7 @@ $(document).ready(function(){
     $.ajax(swapiBaseUrl + "people/", {
         method: "GET",
         data: {
-            search: "r2"
+            search: "darth maul"
         }
     }).done(function(data){
         console.log(data);
@@ -101,7 +101,7 @@ $(document).ready(function(){
      * TO DO TOGETHER: Let's make a request to the books inventory we saved
       * previously.
      */
-    //var myBooks = ???
+    var myBooks = $.ajax("data/books.json")
 
     function onSuccess (data){
         console.log(data);
@@ -115,12 +115,12 @@ $(document).ready(function(){
         console.log("Looking for books...");
     }
 
-
+    myBooks.done(onSuccess);
     /*
      * TO DO TOGETHER: What if we want to display a message if this AJAX request
      * fails?
      */
-
+    myBooks.fail(onFail)
 
 
     /*
@@ -128,18 +128,25 @@ $(document).ready(function(){
      * fails or not?
      */
 
-
+    myBooks.always(onAlways);
 
     /*
      * TO DO: Refactor your Star Wars API request to log a message that says
      * "Something wrong with your request..." if it fails.
      */
+    var swapiFilmsRequest = $.ajax(swapiBaseUrl + "films/");
+
+    swapiFilmsRequest.fail(function(){
+        console.log("Failed to load films.");
+    });
 
     /*
      * TO DO: Refactor your Star Wars API request to log a message that says
      * "...loading" whether the request fails or not.
      */
-
+    swapiFilmsRequest.always(function(){
+        console.log("...loading");
+    });
 
     /*
      * TO DO TOGETHER: Create a Star Wars API request that queries for "A
@@ -148,8 +155,17 @@ $(document).ready(function(){
      * Take a look at the object that is being returned. Write a console log
       * that displays the director of the film.
      */
+    var newHopeSwapiRequest = $.ajax(swapiBaseUrl + "films/1/", {
+        method: "GET",
+        data: {
+            search: "A New Hope"
+        }
+    });
 
-
+    newHopeSwapiRequest.done(function(data){
+        console.log(data);
+        // console.log(data.results[0].director);
+    });
 
 
     /*
@@ -163,9 +179,18 @@ $(document).ready(function(){
      * TO DO: Make a request to books.json. Return the author of "The
      * Canterbury Tales."
      */
+    var booksRequest = $.ajax("data/books.json");
 
+    console.log(booksRequest);
 
-
+    booksRequest.done(function(data){
+        console.log("At the bottom of the file", data);
+        data.forEach(function(book){
+            if(book.title === "Canterbury Tales"){
+                console.log("The author of Canterbury Tales is " + book.author);
+            }
+        })
+    })
     /*********************************************
      *              GET and POST SHORTHAND
      ******************************************** */
@@ -198,11 +223,35 @@ $(document).ready(function(){
 
     // this variable stores our request
 
+    function generateBooks(){
+
+        var bookRequest = $.ajax("data/books.json");
+
+        bookRequest.done(function(data){
+
+            $.each(data, function(index, book){
+
+                var content = "";
+
+                content += "<h2>"+book.title+"</h2>"
+
+                content += "<h4>"+book.author+"</h4>"
+
+                console.log(content);
+
+                $("#main").append(content);
+            });
+        });
+
+        bookRequest.fail(function(){
+            $("#main").append("<h1>Error getting books! :(</h1>");
+        })
+    }
 
 
     // call the function to generate data on page load
 
-
+    generateBooks();
 
     /*
      * TO DO: Add your favorite book to the end of books.json.
@@ -214,6 +263,10 @@ $(document).ready(function(){
      */
 
     // event listener on refresh button
-
+    $("#refresh").click(function(e){
+        console.log("Refresh button was clicked.");
+        $("#main").html("");
+        generateBooks();
+    })
 
 });
