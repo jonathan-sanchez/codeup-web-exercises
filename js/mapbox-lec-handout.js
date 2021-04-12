@@ -71,9 +71,9 @@ var marker = new mapboxgl.Marker()
 
 // TODO: Update the marker object to make the marker draggable. *Hint: reference the docs!
 
-var codeupSAMarker = new mapboxgl.Marker({color: "green", draggable: true})
-    .setLngLat([-98.4896, 29.4268])
-    .addTo(map)
+// var codeupSAMarker = new mapboxgl.Marker({color: "green", draggable: true})
+//     .setLngLat([-98.4896, 29.4268])
+//     .addTo(map)
 
 /**********************************************
  * 					POPUPS
@@ -93,11 +93,11 @@ var codeupSAMarker = new mapboxgl.Marker({color: "green", draggable: true})
 
 // TODO TOGETHER: We'll comment out the popup we just added. Next, let's add a popup to the Alamo marker!
 
-var alamoPopup = new mapboxgl.Popup()
-    .setHTML("<p>Remember the Alamo</p>")
-    .addTo(map)
-
-marker.setPopup(alamoPopup)
+// var alamoPopup = new mapboxgl.Popup()
+//     .setHTML("<p>Remember the Alamo</p>")
+//     .addTo(map)
+//
+// marker.setPopup(alamoPopup)
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup? Choose one and experiment with implementing that option to a popup!
 // TODO: Try setting the text of a popup by using ".setText()" instead of ".setHTML()" - what happens with HTML tags between the two?
@@ -114,8 +114,23 @@ marker.setPopup(alamoPopup)
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
 
+geocode("701 Commerce St #100A, Dallas, Texas 75202", mapboxToken).then(function(results){
+    console.log(results);
+    map.setCenter(results);
+})
+
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 
+geocode("600 Navarro St #600, San Antonio, Texas 78205", mapboxToken).then(function(results){
+
+    var popup = new mapboxgl.Popup()
+        .setHTML("<h6>Thanks Geocode.</h6>")
+
+    new mapboxgl.Marker()
+            .setLngLat(results)
+            .setPopup(popup)
+            .addTo(map)
+})
 
 //TODO: Instead of setCenter try using map.jumpTo()
 //TODO: Instead of setCenter try using map.flyTo()
