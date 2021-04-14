@@ -63,14 +63,14 @@
 
     // TODO: What are some additional ways we can get the weather from this API?
 
-    $.get("https://api.openweathermap.org/data/2.5/weather", {
-      appid: openWeatherMapApi,
-      lat: 29.423017,
-      lon: -98.48527,
-      unit: "imperial"
-    }).done(function(results){
-      console.log(results);
-    });
+    // $.get("https://api.openweathermap.org/data/2.5/weather", {
+    //   appid: openWeatherMapApi,
+    //   lat: 29.423017,
+    //   lon: -98.48527,
+    //   unit: "imperial"
+    // }).done(function(results){
+    //   console.log(results);
+    // });
 
 
 
@@ -93,7 +93,8 @@
       appid: openWeatherMapApi,
       lat: 29.423017,
       lon: -98.48527,
-      unit: "imperial"
+      unit: "imperial",
+      exclude: "current, minutely, hourly, alerts"
     }).done(function(results){
       console.log(results);
     });
