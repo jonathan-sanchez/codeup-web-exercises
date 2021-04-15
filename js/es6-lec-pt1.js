@@ -23,6 +23,7 @@ function checkWeatherTwo(isRaining) {
         const umbrella = "Get an umbrella"
     } else {
         const sunglasses = "Grab your glasses!"
+        //sunglasses = "Got mine!"; //won't work
         console.log(umbrella);
     }
 
@@ -67,6 +68,7 @@ function checkWeatherTwo(isRaining) {
 }
 {
     let b = 20;
+    //console.log("I'm in a block " + b);
 }
 
 const c = 30;
@@ -106,17 +108,21 @@ let firstName = "Douglas";
 let lastName = "Hirsh";
 let greeting = "Hello my name is " + firstName + ' ' + lastName + '.';
 
-// console.log(greeting);
+console.log(greeting);
 
 //TODO: Refactor code from above, using template strings.
+let newGreeting = `Hello my name is ${firstName} ${lastName}. ${1+2}`;
+
+console.log(newGreeting);
 
 
-// console.log(newGreeting);
+let oLetter = `Hi Marco,
+This is a letter with multiple lines. Hope you enjoy template strings.
 
+--Douglas
+`;
 
-
-
-
+console.log(oLetter);
 
 
 
@@ -136,12 +142,18 @@ itemsHtml += "<li>" + items[1]+ "</li>"
 itemsHtml += "<li>" + items[2]+ "</li>"
 itemsHtml += "</ul>";
 
-// console.log(itemsHtml);
+console.log(itemsHtml);
 
 
 //new way
-
-
+// let newItemsHtml = `
+//     <ul>
+//         <li>${items[0]}</li>
+//         <li>${items[1]}</li>
+//         <li>${items[2]}</li>
+//     </ul>
+// `;
+//
 // console.log(newItemsHtml);
 
 
@@ -156,6 +168,9 @@ let program = {
     technology: "HTML, CSS, JS, Java"
 }
 
+let programLetter = `Hello and thank you for your interest in ${program.name}! 
+Our program is located in ${program.location}. The program lasts for ${program.length}.
+`
 
 // console.log(programLetter);
 
@@ -183,7 +198,9 @@ let program = {
 
 const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
-
+// for (let day of days) {
+//     console.log(day);
+// }
 
 /*==============================================*/
 
@@ -191,7 +208,9 @@ const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
 
 const instructors = ["Douglas", "Kenneth", "Justin", "Casey", "David"]
 
-
+for (let instructor of instructors){
+    console.log(instructor);
+}
 
 
 /* ****************************
@@ -203,9 +222,14 @@ const instructors = ["Douglas", "Kenneth", "Justin", "Casey", "David"]
 function sayHello(name){
     return `Hello ${name}`;
 }
+//V1
+let sayHelloAgain = (name) => {return `Hello, ${name}!`};
 
+//V2 this works also.
+// let sayHelloAgain = (name) => `Hello, ${name}!`;
 
-
+//V3 and this way works too.
+// let sayHelloAgain = name => `Hello, ${name}!`;
 
 // console.log(sayHelloAgain("Douglas")); //Hello Douglas
 // console.log(sayHelloAgain("Justin")); //Hello Justin
@@ -220,8 +244,11 @@ function sayHello(name){
 // 	return a + b;
 // }
 
+//V1
+let sum = (a,b) => {return `${a + b}`};
 
-
+//V2 another short way to do this.
+// let sum (a,b) => a + b;
 
 
 // console.log(sum(5, 3)); //8
@@ -280,20 +307,20 @@ const addOneD = arg1 => arg1 + 1;
 //TODO Together: Refactor the following using ES6
 
 // old way
-// function sayHello(name) {
-// 	if (typeof name === 'undefined') {
-// 		name = 'World';
-// 	}
-//
-// 	return 'Hello, ' + name + '!';
-// }
+function sayHello(name) {
+	if (typeof name === 'undefined') {
+		name = 'World';
+	}
+
+	return 'Hello, ' + name + '!';
+}
+
+let sayHello2 = (name = "World") => `Hello, ${name}!`;
 
 
 
-
-
-// console.log(sayHello2());; // "Hello, World!"
-// console.log(sayHello2('codeup'));; // "Hello, codeup!"
+console.log(sayHello2()); // "Hello, World!"
+console.log(sayHello2('codeup')); // "Hello, codeup!"
 
 
 
