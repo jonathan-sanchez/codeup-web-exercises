@@ -12,11 +12,45 @@
 
 //TODO Together: Let's see a common approach we might have done in the past: our goal is to increase each element of an array by 1 [element + 1], then get an array back with those values
 
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//
+// var numbersAddOne = [];
+//
+// for (var i = 0; i < numbers.length[i]; i += 1){
+//     numbersAddOne.push(numbers[i] + 1);
+// }
+// console.log(numbersAddOne); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11] output.
 //TODO Together: Now, let's achieve the same result with the first part of our lesson: the MAP method~
+
+// let numbersAddOneMap = numbers.map(function(num){
+//     return num + 1;
+// })
+//
+// console.log(numbersAddOneMap);
 
 //TODO Together: Let's get all these restaurant names out of this array of objects with .map()!
 
+// let nameList = favoriteRestaurants.map(function(restaurant){
+//     return restaurant.name;
+// })
+// console.log(nameList);
 //TODO: Create your own array of (up to 3 and at least 2) restaurant objects building off of the basic list you created during the MapBox exercise (or build one anew!) ~5 mins
+
+const favoriteRestaurant = [{
+    name: 'Plucker\'s Wing Bar',
+    address: '14881 I-35 Frontage Rd Selma, Tx 78154',
+    phone: '(210) 655-9464'
+},
+{
+    name: 'Rolandos Super Tacos',
+    address: '919 Hildebrand Ave San Antonio, Tx 78201',
+    phone: '(210) 549-5950'
+},
+{
+    name: '',
+    address: '',
+    phone: ''
+}];
 
 //TODO: Now, having created a personal array of restaurant objects for yourself, use .map() to get your favorite restaurant's names out of that collection, into another array, and out into the console! ~5 mins
 
@@ -24,11 +58,22 @@
 
 //TODO Together: Once again, let's take a look at the old way we might approach an issue: getting only one type of values out of an array (for example: even numbers only from an array of nums!)
 
+
+
 //TODO Together: Now, let's refactor the above using the ES6 .filter() method with the same goal: even numbers only!
-
+// var numbers = [1,2,3,4,5,6,7,8,9,10];
+//
+// let evens = numbers.filter(function(num){
+//     return num % 2 === 0;
+// });
+//
+// console.log(evens);
 //TODO Together: Using my favoriteRestaurants list, let's filter out all of the non-buffet restaurants
-
-
+// let hasBuffet = favoriteRestaurants.filter(function(restaurant){
+//     return restaurant.restaurantFeatures.includes('buffet');
+// })
+//
+// console.log(hasBuffet);
 //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
 
 //TODO: Once you've done the above, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
@@ -48,7 +93,24 @@
 
 
 //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
+let familyMembers = [{
+    name: "Samuel Sanchez Jr.",
+    age: 50
+    },{
+    name:"Samuel Sanchez III",
+    age: 30
+    },{
+    name: "Victoria Sanchez",
+    age: 27
+    }];
 
+// console.log(familyMembers);
+//.reduce method i used, pulled from curriculum.
+const totalAge = familyMembers.reduce((total, familyMember ) => {
+    return total + familyMember.age;
+}, 0);
+
+console.log(totalAge);
 
 </script>
 </body>
