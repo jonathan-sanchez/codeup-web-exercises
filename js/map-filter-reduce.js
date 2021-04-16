@@ -37,3 +37,14 @@ const users = [
     }
 ];
 
+const userLanguages = users.filter( (languages) => {
+    return languages.languages.length > 2;
+});
+
+console.log(userLanguages);
+
+let longestEmail = users.reduce( function(user, email){
+    return user.email.length > email.email.length ? user : email;
+});
+
+console.log(longestEmail);
