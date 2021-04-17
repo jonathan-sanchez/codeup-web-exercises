@@ -11,14 +11,14 @@ console.log("What up Jon! These are your JS functions!");
 //
 // makesTen(1, 9) ➞ true
 
-function makesTen(a, b) {
-    if (a === 10 || b === 10 || a + b === 10) { //Logical OR (||)
-        return true;
-    } else {
-        return false;
-    }
-}
-console.log(makesTen(3, 7));
+// function makesTen(a, b) {
+//     if (a === 10 || b === 10 || a + b === 10) { //Logical OR (||)
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(makesTen(3, 7));
 
 //Create a function that takes an integer and return true if it's divisible by 100, otherwise return false.
 //Examples
@@ -278,8 +278,21 @@ function arrValue(arr, i) {
 
 console.log(arrValue(5, 2));
 
-function findDifference(a, b) {
-    return Math.abs((a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2]))
+// function findDifference(a, b) {
+//     return Math.abs((a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2]))
+// }
+//
+// console.log(findDifference());
+
+
+//Lets mutate this array:
+
+let concept = ['arrays', 'can', 'be', 'mutated'];
+
+function changeArr(arr){
+    arr[3] = 'MUTATED';
 }
 
-console.log(findDifference());
+// changeArr(concept);
+
+console.log(concept);

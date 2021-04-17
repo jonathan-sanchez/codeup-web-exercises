@@ -36,13 +36,21 @@ const users = [
         yearsOfExperience: 9
     }
 ];
-
-const userLanguages = users.filter( (languages) => {
+//#1:
+let userLanguages = users.filter( (languages) => {
     return languages.languages.length > 2;
 });
 
 console.log(userLanguages);
 
+//#2:
+let emailStr = users.map((userEmail) => {
+    return users.map(userEmail);
+});
+
+console.log(emailStr);
+
+//#6:
 let longestEmail = users.reduce( function(user, email){
     return user.email.length > email.email.length ? user : email;
 });
