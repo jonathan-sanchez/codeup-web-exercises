@@ -44,15 +44,47 @@ let userLanguages = users.filter( (languages) => {
 console.log(userLanguages);
 
 //#2:
-let emailStr = users.map((userEmail) => {
-    return users.map(userEmail);
+let emailStr = users.map(function(user){
+    return user.email;
 });
 
 console.log(emailStr);
 
-//#6:
-let longestEmail = users.reduce( function(user, email){
-    return user.email.length > email.email.length ? user : email;
-});
+//#3:
+let totalYears = users.reduce(function(totalYears, user){
 
-console.log(longestEmail);
+    return totalYears + user.yearsOfExperience;
+}, 0);
+
+let averageYears = totalYears / users.length;
+
+console.log(averageYears);
+console.log(totalYears);
+
+//#4:
+//Ternary:
+// let longestEmail = users.reduce( function(user, email){
+//     return user.email.length > email.email.length ? user : email;
+// });
+
+// Another way to do it:
+let longestEmail = users.reduce(function(longestEmail, user){
+    if(user.email.length > longestEmail.length){
+        longestEmail = user.email
+    }
+    return longestEmail;
+}, "");
+
+console.log("This is the longest email " + longestEmail);
+
+//#5:
+// let usernameString = users.reduce(function(accumulator, user){
+//     return `${accumulator} ${user.name},`;
+// }, `instructors are: `).slice(0, -1) + ".";
+//
+// console.log(usernameString);
+
+//Example: Easier solution demonstrated by douglas.
+let mapJoinSolution = `instructors are: ${users.map(user=>user.name).join(', ')}.`;
+
+console.log(mapJoinSolution);
