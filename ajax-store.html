@@ -2,23 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Online Store</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
 <h1>My Tool Store</h1>
+<div>
+  <table id="products">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+      </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+  </table>
+</div>
 
-<table id="products">
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Quantity</th>
-    <th>Price</th>
-    <th>Categories</th>
-  </tr>
-  </thead>
-  <tbody id="insertProducts"></tbody>
-</table>
+<button type="submit" id="reset-btn">Refresh</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -33,19 +38,24 @@
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
     function appendInventory() {
-      var getInventory = $.ajax("data/inventory.json");
+      let getInventory = $.ajax("data/inventory.json");
 
       getInventory.done(function(data){
 
         $.each(data, function(index, tool){
 
-          var content = "";
+          let content = "";
 
-          content += "<tbody>"+"<tr>"+"<td>"+tool.title+"</td>"+"</tbody>"
+          content += "<tbody>"+"<th>"+"<th>"+tool.title+"</th>"+"</tbody>"
 
-          content += "<tr>"+"<td>"+tool.quantity+"</td>"+"</tr>"
+          content += "<tbody>"+"<tr>"+"<td>"+tool.quantity+"</td>"+"</tr>"+"</tbody>"
 
-          console.log(content);
+          content += "<tbody>"+"<tr>"+"<td>"+tool.price+"</td>"+"</tr>"+"</tbody>"
+
+          content += "<tbody>"+"<tr>"+"<td>"+tool.categories+"</td>"+"</tr>"+"</tbody>"
+
+
+          // console.log(content);
 
           $("#insertProducts").append(content);
         })
@@ -54,7 +64,15 @@
 
     appendInventory();
   })();
-</script>
 
+  $("#reset-btn").click(function(){
+    location.reload("data/inventory.json");
+  });
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="css/custom.css"></script>
 </body>
 </html>
